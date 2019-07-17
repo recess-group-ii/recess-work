@@ -21,6 +21,11 @@ struct sockaddr_in newAddr;
 socklen_t addr_size;
 char district[256];
 char addmember[190];
+char command[256];
+char commandA[256]="addmember";
+char commandB[256]="check_status";
+char commandC[256]="search_criteria";
+char commandD[256]="get_statement";
 pid_t childpid;
 
 
@@ -53,7 +58,10 @@ while((newSocket = accept(server_socket, (struct sockaddr*)&newAddr, &addr_size)
     recv(newSocket,district,sizeof(district),0);
 puts(district);
 
+    recv(newSocket,command,sizeof(command),0);
+puts(command);
 
+if((strcmp(command,commandA)==0)){
 int number;
 recv(newSocket,&number,sizeof(number),0);
 printf("\n\n[OK]The number entered is %d\n",number);
@@ -123,7 +131,17 @@ for(int c = 0;c <= number; c++){
     fclose(fa);
 }
     }
-}  
+}
+if((strcmp(command,commandB)==0)){
+
+}
+if((strcmp(command,commandC)==0)){
+    
+}
+if((strcmp(command,commandD)==0)){
+    
+} 
+} 
 close(newSocket);
 return 0;
 }

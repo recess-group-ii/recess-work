@@ -7,12 +7,17 @@
 #include <netdb.h>
 #include <arpa/inet.h>
 #include <netinet/in.h>
-
 #define PORT 4040
 
 int main(){
 int client_socket, ret;
 struct sockaddr_in serverAddr;
+
+char commandA[256]="addmember";
+char commandB[256]="check_status";
+char commandC[256]="search_criteria";
+char commandD[256]="get_statement";
+
 printf("\n\tInstructions\n");
 printf("\n* To submit new member list\n");
 printf("Addmember member_name, date, gender, recommender\n\n");
@@ -52,7 +57,12 @@ char district[256];
     gets(district);
     send(client_socket,district,sizeof(district),0);
 
+char command[256];
+printf("Enter command\t");
+gets(command);
+send(client_socket,command,sizeof(command),0);
 
+if((strcmp(command,commandA)==0)){
 int number;
 printf("Enter number of members to register:\t");
 scanf("%d",&number);
@@ -67,9 +77,18 @@ for(int c = 0;c <= number;c++){
     puts(addmember); 
     send(client_socket,addmember,sizeof(addmember),0);
 }
+}
+if((strcmp(command,commandB)==0)){
+
+}
+if((strcmp(command,commandC)==0)){
+    
+}
+if((strcmp(command,commandD)==0)){
+    
+}
 break;
 }
-  
    
 return 0;
 }
