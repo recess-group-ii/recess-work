@@ -22,6 +22,7 @@ struct sockaddr_in serverAddr;
 int newSocket;
 struct sockaddr_in newAddr;
 socklen_t addr_size;
+char sign[256];
 char district[256];
 char addmember[190];
 char command[256];
@@ -82,12 +83,15 @@ for(int c = 0;c <= number; c++){
     
     recv(newSocket,addmember,sizeof(addmember),0);
     puts(addmember);
-    
+    recv(newSocket,sign,sizeof(sign),0);
+    puts(sign);
+
     fk = fopen("kampala.txt", "a+");
     if (fk == NULL){
         printf("Error in creating file!!!");
     }
     fprintf(fk, "\n%s", addmember);
+    fprintf(fk, "\n%s", sign);
     fclose(fk);
 }
     }
@@ -97,12 +101,15 @@ for(int c = 0;c <= number; c++){
     
     recv(newSocket,addmember,sizeof(addmember),0);
     puts(addmember);
+    recv(newSocket,sign,sizeof(sign),0);
+    puts(sign);
     
     fj = fopen("jinja.txt", "a+");
     if (fj == NULL){
         printf("Error in creating file!!!");
     }
     fprintf(fj, "\n%s", addmember);
+    fprintf(fj, "\n%s", sign);
     fclose(fj);
 }
     }
@@ -112,12 +119,15 @@ for(int c = 0;c <= number; c++){
     
     recv(newSocket,addmember,sizeof(addmember),0);
     puts(addmember);
-    
+    recv(newSocket,sign,sizeof(sign),0);
+    puts(sign);
+
     fm = fopen("mbale.txt", "a+");
     if (fm == NULL){
         printf("Error in creating file!!!");
     }
     fprintf(fm, "\n%s", addmember);
+    fprintf(fm, "\n%s", sign);
     fclose(fm);
 }
     }
@@ -127,12 +137,15 @@ for(int c = 0;c <= number; c++){
     
     recv(newSocket,addmember,sizeof(addmember),0);
     puts(addmember);;
-    
+    recv(newSocket,sign,sizeof(sign),0);
+    puts(sign);
+
     fa = fopen("arua.txt", "a+");
     if (fa == NULL){
         printf("Error in creating file!!!");
     }
     fprintf(fa, "\n%s", addmember);
+    fprintf(fa, "\n%s", sign);
     fclose(fa);
 }
     }

@@ -1,0 +1,530 @@
+#include<stdio.h>
+
+char *signature(){
+
+    int cell;
+    int sign[6][4];
+    int j,i;
+    int row, column;
+   
+    printf("Enter 1 or 0\n");
+    for(row=1;row<6;row++){
+        for(column=1;column<4;column++){
+            printf("cell[%d][%d]=",row,column);
+            scanf("%d",&cell);
+            sign[row][column]=cell;
+        }
+    }
+
+   for(j=1;j<6;j++){
+        for(i=1;i<4;i++){
+            if(sign[j][i]==1){
+            printf("*");
+            }
+            else if(sign[j][i]==0){
+                printf(" ");
+            }
+           
+        }
+        printf("\n");
+    }
+
+    
+if(sign[1][1]==0){
+if(sign[1][2]==1){
+if(sign[1][3]==0){
+if(sign[2][1]==1){
+if(sign[2][2]==0){
+if(sign[2][3]==1){
+if(sign[3][1]==1){
+if(sign[3][2]==1){
+if(sign[3][3]==1){
+if(sign[4][1]==1){
+if(sign[4][2]==0){
+if(sign[4][3]==1){
+if(sign[5][1]==1){
+if(sign[5][2]==0){
+if(sign[5][3]==1){	
+}}}}}}}}}}}}}}
+return "A";
+printf("A");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==1){
+if(sign[1][3]==0){
+if(sign[2][1]==1){
+if(sign[2][2]==0){
+if(sign[2][3]==1){
+if(sign[3][1]==1){
+if(sign[3][2]==1){
+if(sign[3][3]==0){
+if(sign[4][1]==1){
+if(sign[4][2]==0){
+if(sign[4][3]==1){
+if(sign[5][1]==1){
+if(sign[5][2]==1){
+if(sign[5][3]==0){	
+}}}}}}}}}}}}}}
+return "B";
+printf("B");
+}
+if(sign[1][1]==0){
+if(sign[1][2]==1){
+if(sign[1][3]==1){
+if(sign[2][1]==1){
+if(sign[2][2]==0){
+if(sign[2][3]==0){
+if(sign[3][1]==1){
+if(sign[3][2]==0){
+if(sign[3][3]==0){
+if(sign[4][1]==1){
+if(sign[4][2]==0){
+if(sign[4][3]==0){
+if(sign[5][1]==0){
+if(sign[5][2]==1){
+if(sign[5][3]==1){	
+}}}}}}}}}}}}}}
+return "C";
+printf("C");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==1){
+if(sign[1][3]==0){
+if(sign[2][1]==1){
+if(sign[2][2]==0){
+if(sign[2][3]==1){
+if(sign[3][1]==1){
+if(sign[3][2]==0){
+if(sign[3][3]==1){
+if(sign[4][1]==1){
+if(sign[4][2]==0){
+if(sign[4][3]==1){
+if(sign[5][1]==1){
+if(sign[5][2]==1){
+if(sign[5][3]==0){	
+}}}}}}}}}}}}}}
+return "D";
+printf("D");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==1){
+if(sign[1][3]==1){
+if(sign[2][1]==1){
+if(sign[2][2]==0){
+if(sign[2][3]==0){
+if(sign[3][1]==1){
+if(sign[3][2]==1){
+if(sign[3][3]==1){
+if(sign[4][1]==1){
+if(sign[4][2]==0){
+if(sign[4][3]==0){
+if(sign[5][1]==1){
+if(sign[5][2]==1){
+if(sign[5][3]==1){	
+}}}}}}}}}}}}}}
+return "E";
+printf("E");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==1){
+if(sign[1][3]==1){
+if(sign[2][1]==1){
+if(sign[2][2]==0){
+if(sign[2][3]==0){
+if(sign[3][1]==1){
+if(sign[3][2]==1){
+if(sign[3][3]==1){
+if(sign[4][1]==1){
+if(sign[4][2]==0){
+if(sign[4][3]==0){
+if(sign[5][1]==1){
+if(sign[5][2]==0){
+if(sign[5][3]==0){	
+}}}}}}}}}}}}}}
+return "F";
+printf("F");
+}
+if(sign[1][1]==0){
+if(sign[1][2]==1){
+if(sign[1][3]==0){
+if(sign[2][1]==1){
+if(sign[2][2]==0){
+if(sign[2][3]==1){
+if(sign[3][1]==1){
+if(sign[3][2]==0){
+if(sign[3][3]==0){
+if(sign[4][1]==1){
+if(sign[4][2]==1){
+if(sign[4][3]==1){
+if(sign[5][1]==0){
+if(sign[5][2]==1){
+if(sign[5][3]==1){	
+}}}}}}}}}}}}}}
+return "G";
+printf("G");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==0){
+if(sign[1][3]==1){
+if(sign[2][1]==1){
+if(sign[2][2]==0){
+if(sign[2][3]==1){
+if(sign[3][1]==1){
+if(sign[3][2]==1){
+if(sign[3][3]==1){
+if(sign[4][1]==1){
+if(sign[4][2]==0){
+if(sign[4][3]==1){
+if(sign[5][1]==1){
+if(sign[5][2]==0){
+if(sign[5][3]==1){	
+}}}}}}}}}}}}}}
+return "H";
+printf("H");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==1){
+if(sign[1][3]==1){
+if(sign[2][1]==0){
+if(sign[2][2]==1){
+if(sign[2][3]==0){
+if(sign[3][1]==0){
+if(sign[3][2]==1){
+if(sign[3][3]==0){
+if(sign[4][1]==0){
+if(sign[4][2]==1){
+if(sign[4][3]==0){
+if(sign[5][1]==1){
+if(sign[5][2]==1){
+if(sign[5][3]==1){	
+}}}}}}}}}}}}}}
+return "I";
+printf("I");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==1){
+if(sign[1][3]==1){
+if(sign[2][1]==0){
+if(sign[2][2]==0){
+if(sign[2][3]==1){
+if(sign[3][1]==0){
+if(sign[3][2]==0){
+if(sign[3][3]==1){
+if(sign[4][1]==1){
+if(sign[4][2]==0){
+if(sign[4][3]==1){
+if(sign[5][1]==0){
+if(sign[5][2]==1){
+if(sign[5][3]==0){	
+}}}}}}}}}}}}}}
+return "J";
+printf("J");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==0){
+if(sign[1][3]==1){
+if(sign[2][1]==1){
+if(sign[2][2]==1){
+if(sign[2][3]==0){
+if(sign[3][1]==1){
+if(sign[3][2]==0){
+if(sign[3][3]==0){
+if(sign[4][1]==1){
+if(sign[4][2]==1){
+if(sign[4][3]==0){
+if(sign[5][1]==1){
+if(sign[5][2]==0){
+if(sign[5][3]==1){	
+}}}}}}}}}}}}}}
+return "K";
+printf("K");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==0){
+if(sign[1][3]==0){
+if(sign[2][1]==1){
+if(sign[2][2]==0){
+if(sign[2][3]==0){
+if(sign[3][1]==1){
+if(sign[3][2]==0){
+if(sign[3][3]==0){
+if(sign[4][1]==1){
+if(sign[4][2]==0){
+if(sign[4][3]==0){
+if(sign[5][1]==1){
+if(sign[5][2]==1){
+if(sign[5][3]==1){	
+}}}}}}}}}}}}}}
+return "L";
+printf("L");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==0){
+if(sign[1][3]==1){
+if(sign[2][1]==1){
+if(sign[2][2]==1){
+if(sign[2][3]==1){
+if(sign[3][1]==1){
+if(sign[3][2]==0){
+if(sign[3][3]==1){
+if(sign[4][1]==1){
+if(sign[4][2]==0){
+if(sign[4][3]==1){
+if(sign[5][1]==1){
+if(sign[5][2]==0){
+if(sign[5][3]==1){	
+}}}}}}}}}}}}}}
+return "M";
+printf("M");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==0){
+if(sign[1][3]==1){
+if(sign[2][1]==1){
+if(sign[2][2]==1){
+if(sign[2][3]==1){
+if(sign[3][1]==1){
+if(sign[3][2]==1){
+if(sign[3][3]==1){
+if(sign[4][1]==1){
+if(sign[4][2]==1){
+if(sign[4][3]==1){
+if(sign[5][1]==1){
+if(sign[5][2]==0){
+if(sign[5][3]==1){	
+}}}}}}}}}}}}}}
+return "N";
+printf("N");
+}
+if(sign[1][1]==0){
+if(sign[1][2]==1){
+if(sign[1][3]==0){
+if(sign[2][1]==1){
+if(sign[2][2]==0){
+if(sign[2][3]==1){
+if(sign[3][1]==1){
+if(sign[3][2]==0){
+if(sign[3][3]==1){
+if(sign[4][1]==1){
+if(sign[4][2]==0){
+if(sign[4][3]==1){
+if(sign[5][1]==0){
+if(sign[5][2]==1){
+if(sign[5][3]==0){	
+}}}}}}}}}}}}}}
+return "O";
+printf("O");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==1){
+if(sign[1][3]==0){
+if(sign[2][1]==1){
+if(sign[2][2]==0){
+if(sign[2][3]==1){
+if(sign[3][1]==1){
+if(sign[3][2]==1){
+if(sign[3][3]==0){
+if(sign[4][1]==1){
+if(sign[4][2]==0){
+if(sign[4][3]==0){
+if(sign[5][1]==1){
+if(sign[5][2]==0){
+if(sign[5][3]==0){	
+}}}}}}}}}}}}}}
+return "P";
+printf("P");
+}
+if(sign[1][1]==0){
+if(sign[1][2]==1){
+if(sign[1][3]==0){
+if(sign[2][1]==1){
+if(sign[2][2]==0){
+if(sign[2][3]==1){
+if(sign[3][1]==1){
+if(sign[3][2]==0){
+if(sign[3][3]==1){
+if(sign[4][1]==1){
+if(sign[4][2]==1){
+if(sign[4][3]==1){
+if(sign[5][1]==0){
+if(sign[5][2]==1){
+if(sign[5][3]==1){	
+}}}}}}}}}}}}}}
+return "Q";
+printf("Q");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==1){
+if(sign[1][3]==0){
+if(sign[2][1]==1){
+if(sign[2][2]==0){
+if(sign[2][3]==1){
+if(sign[3][1]==1){
+if(sign[3][2]==1){
+if(sign[3][3]==0){
+if(sign[4][1]==1){
+if(sign[4][2]==0){
+if(sign[4][3]==1){
+if(sign[5][1]==1){
+if(sign[5][2]==0){
+if(sign[5][3]==1){	
+}}}}}}}}}}}}}}
+return "R";
+printf("R");
+}
+if(sign[1][1]==0){
+if(sign[1][2]==1){
+if(sign[1][3]==1){
+if(sign[2][1]==1){
+if(sign[2][2]==0){
+if(sign[2][3]==0){
+if(sign[3][1]==0){
+if(sign[3][2]==1){
+if(sign[3][3]==0){
+if(sign[4][1]==0){
+if(sign[4][2]==0){
+if(sign[4][3]==1){
+if(sign[5][1]==1){
+if(sign[5][2]==1){
+if(sign[5][3]==0){	
+}}}}}}}}}}}}}}
+return "S";
+printf("S");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==1){
+if(sign[1][3]==1){
+if(sign[2][1]==0){
+if(sign[2][2]==1){
+if(sign[2][3]==0){
+if(sign[3][1]==0){
+if(sign[3][2]==1){
+if(sign[3][3]==0){
+if(sign[4][1]==0){
+if(sign[4][2]==1){
+if(sign[4][3]==0){
+if(sign[5][1]==0){
+if(sign[5][2]==1){
+if(sign[5][3]==0){	
+}}}}}}}}}}}}}}
+return "T";
+printf("T");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==0){
+if(sign[1][3]==1){
+if(sign[2][1]==1){
+if(sign[2][2]==0){
+if(sign[2][3]==1){
+if(sign[3][1]==1){
+if(sign[3][2]==0){
+if(sign[3][3]==1){
+if(sign[4][1]==1){
+if(sign[4][2]==0){
+if(sign[4][3]==1){
+if(sign[5][1]==0){
+if(sign[5][2]==1){
+if(sign[5][3]==0){	
+}}}}}}}}}}}}}}
+return "U";
+printf("U");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==0){
+if(sign[1][3]==1){
+if(sign[2][1]==1){
+if(sign[2][2]==0){
+if(sign[2][3]==1){
+if(sign[3][1]==1){
+if(sign[3][2]==0){
+if(sign[3][3]==1){
+if(sign[4][1]==0){
+if(sign[4][2]==0){
+if(sign[4][3]==0){
+if(sign[5][1]==0){
+if(sign[5][2]==1){
+if(sign[5][3]==0){	
+}}}}}}}}}}}}}}
+return "V";
+printf("V");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==0){
+if(sign[1][3]==1){
+if(sign[2][1]==1){
+if(sign[2][2]==0){
+if(sign[2][3]==1){
+if(sign[3][1]==1){
+if(sign[3][2]==0){
+if(sign[3][3]==1){
+if(sign[4][1]==1){
+if(sign[4][2]==1){
+if(sign[4][3]==1){
+if(sign[5][1]==1){
+if(sign[5][2]==0){
+if(sign[5][3]==1){	
+}}}}}}}}}}}}}}
+return "W";
+printf("W");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==0){
+if(sign[1][3]==1){
+if(sign[2][1]==1){
+if(sign[2][2]==0){
+if(sign[2][3]==1){
+if(sign[3][1]==1){
+if(sign[3][2]==1){
+if(sign[3][3]==1){
+if(sign[4][1]==1){
+if(sign[4][2]==0){
+if(sign[4][3]==1){
+if(sign[5][1]==1){
+if(sign[5][2]==0){
+if(sign[5][3]==1){	
+}}}}}}}}}}}}}}
+return "X";
+printf("X");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==0){
+if(sign[1][3]==1){
+if(sign[2][1]==1){
+if(sign[2][2]==0){
+if(sign[2][3]==1){
+if(sign[3][1]==0){
+if(sign[3][2]==1){
+if(sign[3][3]==0){
+if(sign[4][1]==0){
+if(sign[4][2]==1){
+if(sign[4][3]==0){
+if(sign[5][1]==0){
+if(sign[5][2]==1){
+if(sign[5][3]==0){	
+}}}}}}}}}}}}}}
+return "Y";
+printf("Y");
+}
+if(sign[1][1]==1){
+if(sign[1][2]==1){
+if(sign[1][3]==1){
+if(sign[2][1]==0){
+if(sign[2][2]==0){
+if(sign[2][3]==0){
+if(sign[3][1]==0){
+if(sign[3][2]==1){
+if(sign[3][3]==0){
+if(sign[4][1]==0){
+if(sign[4][2]==0){
+if(sign[4][3]==0){
+if(sign[5][1]==1){
+if(sign[5][2]==1){
+if(sign[5][3]==1){	
+}}}}}}}}}}}}}}
+return "Z";
+printf("Z");
+}
+//return 0;}
+//char sign = sinature();
+}
+

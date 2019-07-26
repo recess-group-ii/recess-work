@@ -8,9 +8,11 @@
 #include <arpa/inet.h>
 #include <netinet/in.h>
 #include <ctype.h>
+#include "signature.c"
 #define PORT 4040
 
 int main(){
+    
 int client_socket, ret;
 struct sockaddr_in serverAddr;
 
@@ -85,6 +87,9 @@ for(int c = 0;c <= number;c++){
     puts(addmember); 
     send(client_socket,addmember,sizeof(addmember),0);
 }
+printf("Enter signature\n");
+char sign = signature();
+send(client_socket,sign,sizeof(sign),0);
 }
 
 
