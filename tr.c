@@ -19,13 +19,37 @@ struct sockaddr_in newAddr;
 socklen_t addr_size;
 char sign[256];
 char district[256];
-char addmember[190];
+char addmember[256];
 char command[256];
 char commandA[256]="addmember";
 char commandB[256]="check_status";
-char commandC[256]="Search";
+char commandC[256]="search_criteria";
 char commandD[256]="get_statement";
-char commandE[256]="addmember ";
+char commandE[256]="addmemberfromfile";
+
+
+
+/*void printperson(char person[]){
+	char line[256];
+    char newline[256];
+	FILE *fp;
+	fp = fopen("status.txt","r");
+	if (fp==NULL){
+		printf("Error file not found;");
+		return;
+	}
+	
+	while(!feof(fp)){
+		fgets(line,256,fp);
+		if(strstr(line,person)!= NULL){
+		printf("\n%s",line);
+        strcpy(newline,line);
+   		}
+ 		}
+	fclose(fp);
+    send(server_socket,newline,sizeof(newline),0); 
+}*/
+
 
 
 int main(){
@@ -75,6 +99,8 @@ if((strcmp(command,commandA)==0)){
 int number;
 recv(newSocket,&number,sizeof(number),0);
 printf("\n\n[OK]The number entered is %d\n",number);
+
+//int number;
 
 char a[10] = "kampala";
     char b[10] = "jinja";
@@ -153,7 +179,7 @@ fclose(fm);
     }
 
         if ((strcmp(district, n) == 0)){
-for(int c = 0;c <= number; c++){
+    for(int c = 0;c <= number; c++){
     
     recv(newSocket,addmember,sizeof(addmember),0);
     puts(addmember);;
@@ -180,78 +206,89 @@ fclose(fa);
 
 
 if((strcmp(command,commandB)==0)){
-char id[256];
-    recv(newSocket,id,sizeof(id),0);
-    printf("%s",id);
-    char line[256];
-    FILE *fp;
-	fp = fopen(id,"r");
-	if (fp==NULL){
-		printf("Error file not found;");
-        break;
-	}
-	
-	while(!feof(fp)){
-		fgets(line,256,fp);
-		printf("\n%s",line);
-        send(newSocket,line,sizeof(line),0); 
-   		}
-	fclose(fp);
+
 }
 
 
 
 
-if((strstr(command,commandC)!=NULL)){
+if((strcmp(command,commandC)==0)){
     char id[256];
     recv(newSocket,id,sizeof(id),0);
     printf("%s",id);
     char line[256];
     char newline[256];
+    char ch;
+    int nol=0,nos=0,noc=0,noalp=0;
 	FILE *fp;
+    FILE *fpc;
+    FILE *fpcc;
 	fp = fopen("status.txt","r");
 	if (fp==NULL){
 		printf("Error file not found;");
         break;
 	}
-	
+	 fpc = fopen("newrec.txt","w");
 	while(!feof(fp)){
 		fgets(line,256,fp);
 		if(strstr(line,id)!= NULL){
 		printf("\n%s",line);
         strcpy(newline,line);
-        send(newSocket,newline,sizeof(newline),0); 
+       
+         if (fpc == NULL){
+        printf("Error in creating file!!!");
+    }
+    fprintf(fpc, "\n%s", newline);
+    fclose(fpc);
+        send(newSocket,newline,sizeof(newline),0);    		}
    		}
- 		}
+    
 	fclose(fp);
-
+    fpcc = fopen("newrec.txt","r");
+    while(1){
+    ch=fgetc(fpcc);
+    if(ch==EOF)
+    break;
+    else{
+        noc++;
+        if(ch==' ')
+        nos++;
+        else if(ch=='\n')
+        nol++;
+        else
+        {
+            noalp++;
+        }
+        
+    }
+    }
+    fclose(fpcc);
+    printf("lines==%d",nol);
 }
-
 
 
 
 if((strcmp(command,commandD)==0)){
-   char id[256];
-    recv(newSocket,id,sizeof(id),0);
-    printf("%s",id);
-    char line[256];
-    char newline[256];
-	FILE *fp;
-	fp = fopen("payment.txt","r");
-	if (fp==NULL){
-		printf("Error file not found;");
-        break;
-	}
-	
-	while(!feof(fp)){
-		fgets(line,256,fp);
-		if(strstr(line,id)!= NULL){
-		printf("\n%s",line);
-        strcpy(newline,line);
-        send(newSocket,newline,sizeof(newline),0); 
-   		}
- 		}
-	fclose(fp);
+    char payments[256];
+    FILE *sorotis;
+    int words =0;
+    char c;
+    sorotis = fopen("payment.txt","r");
+    while((c = getc(sorotis)) != EOF){
+        fscanf(sorotis,"%s",payments);
+        if(isspace(c) || c=='\t')
+            words++;
+    }
+    write(server_socket,&words,sizeof(int));
+    rewind(sorotis);
+
+    char ch;
+    while((ch!= EOF)){
+        fscanf(sorotis,"%s",payments);
+        write(server_socket,payments,256);
+        ch = fgetc(sorotis);
+    }
+    printf("The file has been succesfully sent");
 
 }
 
@@ -261,7 +298,7 @@ if((strcmp(command,commandD)==0)){
 
 
 
-if((strstr(command,commandE)!=NULL)){
+if((strcmp(command,commandE)==0)){
     char dist1[256]= "soroti.txt";
     char dist2[256]= "lira.txt";
     char dist[256];

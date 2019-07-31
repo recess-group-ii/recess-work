@@ -18,14 +18,14 @@ struct sockaddr_in serverAddr;
 
 char commandA[256]="addmember";
 char commandB[256]="check_status";
-char commandC[256]="search_criteria";
+char commandC[256]="Search ";
 char commandD[256]="get_statement";
 {FILE *pay;
   struct payment{
     int p;
   };}
 
-char commandE[256]="addmemberfromfile";
+char commandE[256]="addmember ";
   
 
 printf("\n\tInstructions\n");
@@ -36,7 +36,7 @@ printf("Check_status\n\n");
 printf("[*] To check statement of payment for the logged in user,\n");
 printf("get_statement\n\n");
 printf("[*] To submit new members from the file,\n");
-printf("Addmemberfromfile\n\n");
+printf("Addmember file.txt\n\n");
 printf("[*] To search and view a record from file by date or name\n");
 printf("Search_criteria\n\n");
 
@@ -61,12 +61,12 @@ if(ret<0){
 }
 printf("Connected to server\n");
 
-while(1){
+
 char district[256];
     printf("Enter District:\t");
     gets(district);
     send(client_socket,district,sizeof(district),0);
-
+while(1){
 char command[256];
 printf("Enter command:\t");
 gets(command);
@@ -79,9 +79,8 @@ scanf("%d",&number);
 send(client_socket,&number,sizeof(number),0);
 
 char details[256];
-char addmember[256];       
+char addmember[190];       
 for(int c = 0;c <= number;c++){
-    
     gets(details);
     strncpy(addmember,details + 10,50);
     puts(addmember); 
@@ -95,21 +94,29 @@ send(client_socket,sign,sizeof(sign),0);
 
 
 
+
 if((strcmp(command,commandB)==0)){
-
-}
-
-
-
-if((strcmp(command,commandC)==0)){
-    char id[256];
-    printf("Search Member by ID:\t");
+ char id[256];
+    printf("Enter Name of file eg file.txt:\t");
     gets(id);
     send(client_socket,id,sizeof(id),0);
    char newline[256];
-  for(int i=0;i<100;i++){
+    for(int i=0;i<10;i++){
    recv(client_socket,newline,sizeof(newline),0);
-   printf("This is the member:\t%s\n",newline);
+   printf("%s\n",newline);
+}
+}
+
+
+if((strstr(command,commandC)!=NULL)){
+    char id[256];
+    strncpy(id,command + 7,50);
+    send(client_socket,id,sizeof(id),0);
+   char newline[256];
+    
+  for(int i=0;i < 100;i++){ 
+   recv(client_socket,newline,sizeof(newline),0);
+   printf("Your search result:\t%s\n",newline);
   }
 }
 
@@ -119,7 +126,15 @@ if((strcmp(command,commandC)==0)){
 
 
 if((strcmp(command,commandD)==0)){
-   
+    char id[256];
+    printf("Enter Name od ID:\t");
+    gets(id);
+    send(client_socket,id,sizeof(id),0);
+   char newline[256];
+    
+   recv(client_socket,newline,sizeof(newline),0);
+   printf("Your payment is:\n%s\n",newline);
+  
     
 }
 
@@ -128,12 +143,13 @@ if((strcmp(command,commandD)==0)){
 
 
 
-if((strcmp(command,commandE)==0)){
+if((strstr(command,commandE)!=NULL)){
     char dist1[256]="soroti.txt";
     char dist2[256]="lira.txt";
     char dist[256];
-    printf("Enter name of district file: example distict.txt");
-    scanf("%s",dist);
+    strncpy(dist,command + 10,50);
+   // printf("Enter name of district file: example distict.txt");
+   // scanf("%s",dist);
     send(client_socket,dist,sizeof(dist),0);   
     if(strcmp(dist,dist1)==0){
     char distsoroti[256];
@@ -184,7 +200,7 @@ if(strcmp(dist,dist2)==0){
 }
 
 break;
+
 }
-   
 return 0;
 }
