@@ -29,16 +29,16 @@ char commandE[256]="addmemberfromfile";
   
 
 printf("\n\tInstructions\n");
-printf("\n* To submit new member list\n");
+printf("\n[*] To submit new member list\n");
 printf("Addmember member_name, date, gender, recommender\n\n");
-printf("* To check status of the file,\n");
+printf("[*]To check status of the file,\n");
 printf("Check_status\n\n");
-printf("* To check statement of payment for the logged in user,\n");
+printf("[*] To check statement of payment for the logged in user,\n");
 printf("get_statement\n\n");
-printf("* To submit new members from the file,\n");
+printf("[*] To submit new members from the file,\n");
 printf("Addmemberfromfile\n\n");
-printf("* To search and view a record from file by date or name\n");
-printf("Search criteria\n\n");
+printf("[*] To search and view a record from file by date or name\n");
+printf("Search_criteria\n\n");
 
 
 
@@ -68,7 +68,7 @@ char district[256];
     send(client_socket,district,sizeof(district),0);
 
 char command[256];
-printf("Enter commad\t");
+printf("Enter command:\t");
 gets(command);
 send(client_socket,command,sizeof(command),0);
 
@@ -79,7 +79,7 @@ scanf("%d",&number);
 send(client_socket,&number,sizeof(number),0);
 
 char details[256];
-char addmember[190];       
+char addmember[256];       
 for(int c = 0;c <= number;c++){
     
     gets(details);
@@ -88,7 +88,8 @@ for(int c = 0;c <= number;c++){
     send(client_socket,addmember,sizeof(addmember),0);
 }
 printf("Enter signature\n");
-char sign = signature();
+char* sign = signature();
+printf("%s",sign);
 send(client_socket,sign,sizeof(sign),0);
 }
 
@@ -101,7 +102,15 @@ if((strcmp(command,commandB)==0)){
 
 
 if((strcmp(command,commandC)==0)){
-    
+    char id[256];
+    printf("Search Member by ID:\t");
+    gets(id);
+    send(client_socket,id,sizeof(id),0);
+   char newline[256];
+  for(int i=0;i<100;i++){
+   recv(client_socket,newline,sizeof(newline),0);
+   printf("This is the member:\t%s\n",newline);
+  }
 }
 
 
@@ -110,27 +119,7 @@ if((strcmp(command,commandC)==0)){
 
 
 if((strcmp(command,commandD)==0)){
-    char payments[256];
-    File *pss;
-        int ch = 0;
-        pss = fopen("paymentRecieved.txt","a");
-        int words;
-        read(newSocket,&words,sizeof(int));
-        while(ch != words){
-            read(newSocket,payments,256);
-            fprintf(pss,"%s ",payments);
-            ch++;
-        }
-        printf("The file has been recieved successfully.");
-
-        struct payment py;
-     pay = fopen("paymentRecieved.txt", "rb");
-    if (fa == NULL){
-        printf("Error in creating file!!!");
-    }
-    fread(&py,sizeof(struct payment),1,pay);
-    printf("The pay is %d\n",py.p);
-    fclose(pay);
+   
     
 }
 
@@ -140,11 +129,11 @@ if((strcmp(command,commandD)==0)){
 
 
 if((strcmp(command,commandE)==0)){
-    char dist1[256]=soroti.txt;
-    char dist2[256]=lira.txt;
+    char dist1[256]="soroti.txt";
+    char dist2[256]="lira.txt";
     char dist[256];
     printf("Enter name of district file: example distict.txt");
-    scanf("%s",&dist);
+    scanf("%s",dist);
     send(client_socket,dist,sizeof(dist),0);   
     if(strcmp(dist,dist1)==0){
     char distsoroti[256];
@@ -161,7 +150,7 @@ if((strcmp(command,commandE)==0)){
     rewind(soroti);
 
     char ch;
-    while((ch!= EOF){
+    while((ch!= EOF)){
         fscanf(soroti,"%s",distsoroti);
         write(client_socket,distsoroti,256);
         ch = fgetc(soroti);
@@ -184,7 +173,7 @@ if(strcmp(dist,dist2)==0){
     rewind(lira);
 
     char ch;
-    while((ch!= EOF){
+    while((ch!= EOF)){
         fscanf(lira,"%s",distlira);
         write(client_socket,distlira,256);
         ch = fgetc(lira);
