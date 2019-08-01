@@ -1,0 +1,96 @@
+[2019-07-24 00:15:55] local.ERROR: Class 'LaravelFrontendPresets\BlackPreset\BlackPresetServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'LaravelFrontendPresets\\BlackPreset\\BlackPresetServiceProvider' not found at /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:208)
+[stacktrace]
+#0 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('LaravelFrontend...')
+#1 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(584): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(210): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /opt/lampp/htdocs/RMS/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2019-07-24 00:17:00] local.ERROR: Class 'Illuminate\LaravelFrontendPresets\BlackPreset\BlackPresetServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Illuminate\\LaravelFrontendPresets\\BlackPreset\\BlackPresetServiceProvider' not found at /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:208)
+[stacktrace]
+#0 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('Illuminate\\\\Lara...')
+#1 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(584): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(210): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /opt/lampp/htdocs/RMS/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2019-07-24 00:17:23] local.ERROR: Class 'LaravelFrontendPresets\BlackPreset\BlackPresetServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'LaravelFrontendPresets\\BlackPreset\\BlackPresetServiceProvider' not found at /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:208)
+[stacktrace]
+#0 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('LaravelFrontend...')
+#1 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(584): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(210): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /opt/lampp/htdocs/RMS/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2019-07-24 00:17:50] local.ERROR: Class 'LaravelFrontendPresets\BlackPreset\BlackPresetServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'LaravelFrontendPresets\\BlackPreset\\BlackPresetServiceProvider' not found at /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:208)
+[stacktrace]
+#0 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('LaravelFrontend...')
+#1 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(584): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(210): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /opt/lampp/htdocs/RMS/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2019-07-24 00:17:53] local.ERROR: Class 'LaravelFrontendPresets\BlackPreset\BlackPresetServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'LaravelFrontendPresets\\BlackPreset\\BlackPresetServiceProvider' not found at /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:208)
+[stacktrace]
+#0 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('LaravelFrontend...')
+#1 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(584): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(210): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /opt/lampp/htdocs/RMS/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2019-07-24 00:18:13] local.ERROR: Class 'LaravelFrontendPresets\BlackPreset\BlackPresetServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'LaravelFrontendPresets\\BlackPreset\\BlackPresetServiceProvider' not found at /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:208)
+[stacktrace]
+#0 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('LaravelFrontend...')
+#1 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(584): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(210): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /opt/lampp/htdocs/RMS/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2019-07-24 11:48:31] local.ERROR: Class 'LaravelFrontendPresets\BlackPreset\BlackPresetServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'LaravelFrontendPresets\\BlackPreset\\BlackPresetServiceProvider' not found at /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:208)
+[stacktrace]
+#0 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('LaravelFrontend...')
+#1 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(584): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(210): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /opt/lampp/htdocs/RMS/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2019-07-24 12:18:12] local.ERROR: Class 'LaravelFrontendPresets\BlackPreset\BlackPresetServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'LaravelFrontendPresets\\BlackPreset\\BlackPresetServiceProvider' not found at /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:208)
+[stacktrace]
+#0 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('LaravelFrontend...')
+#1 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(584): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(210): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 /opt/lampp/htdocs/RMS/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /opt/lampp/htdocs/RMS/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
