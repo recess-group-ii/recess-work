@@ -25,7 +25,7 @@ char commandD[256]="get_statement";
     int p;
   };}
 
-char commandE[256]="addmember ";
+char commandE[256]="addmember_";
   
 
 printf("\n\tInstructions\n");
@@ -36,7 +36,7 @@ printf("Check_status\n\n");
 printf("[*] To check statement of payment for the logged in user,\n");
 printf("get_statement\n\n");
 printf("[*] To submit new members from the file,\n");
-printf("Addmember file.txt\n\n");
+printf("Addmember_file.txt\n\n");
 printf("[*] To search and view a record from file by date or name\n");
 printf("Search_criteria\n\n");
 
@@ -100,8 +100,10 @@ if((strcmp(command,commandB)==0)){
     printf("Enter Name of file eg file.txt:\t");
     gets(id);
     send(client_socket,id,sizeof(id),0);
+   int ln;
+   recv(client_socket,&ln,sizeof(ln),0);
    char newline[256];
-    for(int i=0;i<10;i++){
+    for(int i=0;i<ln;i++){
    recv(client_socket,newline,sizeof(newline),0);
    printf("%s\n",newline);
 }

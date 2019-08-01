@@ -25,7 +25,7 @@ char commandA[256]="addmember";
 char commandB[256]="check_status";
 char commandC[256]="Search";
 char commandD[256]="get_statement";
-char commandE[256]="addmember ";
+char commandE[256]="addmember_";
 
 
 int main(){
@@ -74,7 +74,7 @@ puts(command);
 if((strcmp(command,commandA)==0)){
 int number;
 recv(newSocket,&number,sizeof(number),0);
-printf("\n\n[OK]The number entered is %d\n",number);
+printf("[OK]The number entered is %d",number);
 
 char a[10] = "kampala";
     char b[10] = "jinja";
@@ -87,7 +87,7 @@ for(int c = 0;c <= number; c++){
     puts(addmember);
     
 
-    fk = fopen("kampala.txt", "a+");
+    fk = fopen("kampala.txt", "a");
     if (fk == NULL){
         printf("Error in creating file!!!");
     }
@@ -95,7 +95,7 @@ for(int c = 0;c <= number; c++){
     //fprintf(fk, "\n%s", sign);
     fclose(fk);
 }
-fk = fopen("kampala.txt", "a+");
+fk = fopen("kampala.txt", "a");
 
     recv(newSocket,sign,sizeof(sign),0);
     puts(sign);
@@ -111,7 +111,7 @@ for(int c = 0;c <= number; c++){
     puts(addmember);
    
     
-    fj = fopen("jinja.txt", "a+");
+    fj = fopen("jinja.txt", "a");
     if (fj == NULL){
         printf("Error in creating file!!!");
     }
@@ -119,7 +119,7 @@ for(int c = 0;c <= number; c++){
     //fprintf(fj, "\n%s", sign);
     fclose(fj);
 }
-fj = fopen("jinja.txt", "a+");
+fj = fopen("jinja.txt", "a");
 
     recv(newSocket,sign,sizeof(sign),0);
     puts(sign);
@@ -135,7 +135,7 @@ for(int c = 0;c <= number; c++){
     puts(addmember);
     
 
-    fm = fopen("mbale.txt", "a+");
+    fm = fopen("mbale.txt", "a");
     if (fm == NULL){
         printf("Error in creating file!!!");
     }
@@ -143,7 +143,7 @@ for(int c = 0;c <= number; c++){
     //fprintf(fm, "\n%s", sign);
     fclose(fm);
 }
-fm = fopen("mbale.txt", "a+");
+fm = fopen("mbale.txt", "a");
 
     recv(newSocket,sign,sizeof(sign),0);
     puts(sign);
@@ -158,7 +158,7 @@ for(int c = 0;c <= number; c++){
     recv(newSocket,addmember,sizeof(addmember),0);
     puts(addmember);;
     
-    fa = fopen("arua.txt", "a+");
+    fa = fopen("arua.txt", "a");
     if (fa == NULL){
         printf("Error in creating file!!!");
     }
@@ -184,6 +184,25 @@ char id[256];
     recv(newSocket,id,sizeof(id),0);
     printf("%s",id);
     char line[256];
+
+    	char ch;
+	FILE *fpl;
+	int nw=0,nc=0,nl=0;
+	fpl=fopen(id,"r");
+	
+	while((ch=fgetc(fpl))!=EOF){
+		if (ch==' ')
+		nw++;
+		else if(ch=='\n')
+		nl++;
+		else
+		nc++;
+	}
+fclose(fpl);
+	printf("\n number of characters =%d",nc);
+	printf("\n number of words =%d",nw);
+	printf("\n number of lines =%d",nl);
+    send(newSocket,&nl,sizeof(nl),0); 
     FILE *fp;
 	fp = fopen(id,"r");
 	if (fp==NULL){
