@@ -12,7 +12,9 @@
 
 
 
-int server_socket, ret;
+
+int main(){
+    int server_socket, ret;
 struct sockaddr_in serverAddr;
 int newSocket;
 struct sockaddr_in newAddr;
@@ -28,7 +30,6 @@ char commandD[256]="get_statement";
 char commandE[256]="addmember_";
 
 
-int main(){
   FILE *fk;
   FILE *fj;
   FILE *fm;
@@ -69,8 +70,7 @@ puts(district);
 
     recv(newSocket,command,sizeof(command),0);
 puts(command);
-
-
+ 
 if((strcmp(command,commandA)==0)){
 int number;
 recv(newSocket,&number,sizeof(number),0);
@@ -87,21 +87,19 @@ for(int c = 0;c <= number; c++){
     puts(addmember);
     
 
-    fk = fopen("kampala.txt", "a");
+    fk = fopen("kampala.txt", "a+");
     if (fk == NULL){
         printf("Error in creating file!!!");
     }
     fprintf(fk, "\n%s", addmember);
-    //fprintf(fk, "\n%s", sign);
     fclose(fk);
 }
-fk = fopen("kampala.txt", "a");
-
-    recv(newSocket,sign,sizeof(sign),0);
+fk = fopen("kampala.txt", "a+");
+recv(newSocket,sign,sizeof(sign),0);
     puts(sign);
-        fprintf(fk, "\n%s", sign);
-
+fprintf(fk, "\n%s", sign);
 fclose(fk);
+
     }
 
         if ((strcmp(district, b) == 0)){
@@ -111,7 +109,7 @@ for(int c = 0;c <= number; c++){
     puts(addmember);
    
     
-    fj = fopen("jinja.txt", "a");
+    fj = fopen("jinja.txt", "a+");
     if (fj == NULL){
         printf("Error in creating file!!!");
     }
@@ -119,7 +117,7 @@ for(int c = 0;c <= number; c++){
     //fprintf(fj, "\n%s", sign);
     fclose(fj);
 }
-fj = fopen("jinja.txt", "a");
+fj = fopen("jinja.txt", "a+");
 
     recv(newSocket,sign,sizeof(sign),0);
     puts(sign);
@@ -135,15 +133,16 @@ for(int c = 0;c <= number; c++){
     puts(addmember);
     
 
-    fm = fopen("mbale.txt", "a");
+    fm = fopen("mbale.txt", "a+");
     if (fm == NULL){
         printf("Error in creating file!!!");
     }
     fprintf(fm, "\n%s", addmember);
     //fprintf(fm, "\n%s", sign);
     fclose(fm);
+
 }
-fm = fopen("mbale.txt", "a");
+fm = fopen("mbale.txt", "a+");
 
     recv(newSocket,sign,sizeof(sign),0);
     puts(sign);
@@ -158,7 +157,7 @@ for(int c = 0;c <= number; c++){
     recv(newSocket,addmember,sizeof(addmember),0);
     puts(addmember);;
     
-    fa = fopen("arua.txt", "a");
+    fa = fopen("arua.txt", "a+");
     if (fa == NULL){
         printf("Error in creating file!!!");
     }

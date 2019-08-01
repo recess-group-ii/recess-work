@@ -72,6 +72,7 @@ printf("Enter command:\t");
 gets(command);
 send(client_socket,command,sizeof(command),0);
 
+
 if((strcmp(command,commandA)==0)){
 int number;
 printf("Enter number of members to register:\t");
@@ -88,7 +89,7 @@ for(int c = 0;c <= number;c++){
 }
 printf("Enter signature\n");
 char* sign = signature();
-printf("%s",sign);
+puts(sign);
 send(client_socket,sign,sizeof(sign),0);
 }
 
@@ -124,18 +125,15 @@ if((strstr(command,commandC)!=NULL)){
 
 
 
-
-
-
 if((strcmp(command,commandD)==0)){
     char id[256];
-    printf("Enter Name od ID:\t");
+    printf("Enter Name or ID:\t");
     gets(id);
     send(client_socket,id,sizeof(id),0);
    char newline[256];
     
    recv(client_socket,newline,sizeof(newline),0);
-   printf("Your payment is:\n%s\n",newline);
+   printf("Your payment details are:\n%s\n",newline);
   
     
 }
